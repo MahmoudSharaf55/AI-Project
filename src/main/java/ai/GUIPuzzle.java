@@ -9,10 +9,6 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-
-/**
- * Created by mrsfy on 27-Mar-17.
- */
 public class GUIPuzzle extends StackPane {
 
     private GraphicsContext gc;
