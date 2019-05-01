@@ -14,5 +14,6 @@
     <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.8" level="project" />
     <orderEntry type="library" name="Maven: org.controlsfx:controlsfx:8.40.15" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx:8.9" level="project" />
   </component>
 </module>

@@ -8,35 +8,34 @@ public class GeneticAlgorithm {
             populationsize-=1;
 
         System.out.println(1);
-//        int maxvalue=maxfitness(numofgene);
+//        int maxvalue=maxFitness(numofgene);
         int [][]population=new int [populationsize][numofgene];
 
         for (int i=0;i<populationsize;i++){
-            population[i]=randomstate(numofgene);
+            population[i]= randomState(numofgene);
         }
         System.out.println("=====================");
         System.out.println(2);
 
         while (true){
-            int count=0;
             crossover(population);
-            for (int[] ints : population) {  //foreach in java5
-                if (getfitness(ints) == maxfitness(ints.length))
+            for (int[] ints : population) {
+                if (getFitness(ints) == maxFitness(ints.length))
                     return ints;
-                meutation(ints);
-                if (getfitness(ints) == maxfitness(ints.length))
+                mutation(ints);
+                if (getFitness(ints) == maxFitness(ints.length))
                     return ints;
             }
         }
     }
 
 
-    private static void meutation(int[] chro){
+    private static void mutation(int[] chro){
         chro[(int)(Math.random()*chro.length)]=(int)(Math.random()*chro.length);
     }
 
 
-    private static int [] randomstate(int n){
+    private static int [] randomState(int n){
         int []arr=new int[n];
         for (int i=0;i<n;i++){
             arr[i]=((int) (Math.random() * n));
@@ -44,7 +43,7 @@ public class GeneticAlgorithm {
         return arr;
     }
 
-    private static int heurastic(int[] chromosome){  //goal minimize heuristic
+    private static int heuristic(int[] chromosome){  //goal minimize heuristic
         int heu=0;
         for (int i=0;i<chromosome.length;i++){
             for (int j=i+1;j<chromosome.length;j++){
@@ -55,12 +54,12 @@ public class GeneticAlgorithm {
         return heu;
     }
 
-    private static int maxfitness(int n){
+    private static int maxFitness(int n){
         return (n*(n-1))/2;
     }
 
-    private static int getfitness(int[] chro){
-        return (maxfitness(chro.length)-heurastic(chro));
+    private static int getFitness(int[] chro){
+        return (maxFitness(chro.length)- heuristic(chro));
     }
 
     private static void crossover(int[][] population){

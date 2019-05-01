@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="160.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ai.Controller">
+   <children>
+      <HBox alignment="CENTER" layoutX="308.0" layoutY="252.0" prefHeight="100.0" prefWidth="872.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#nQueenWindow" prefHeight="67.0" prefWidth="192.0" style="-fx-background-color: #2196F3;" text="N-Queen" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" onAction="#chatBotWindow" prefHeight="67.0" prefWidth="192.0" style="-fx-background-color: #2196F3;" text="Chatbot" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
